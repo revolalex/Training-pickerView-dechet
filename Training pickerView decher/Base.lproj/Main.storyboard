@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,93 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Training_pickerView_decher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle type de déchet à recycler aujourd'hui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pce-2I-ZkD">
+                                <rect key="frame" x="45.5" y="8" width="284" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="jyc-ex-O4c"/>
+                                    <constraint firstAttribute="height" constant="71" id="xDO-1M-LvX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bG6-Py-SOM">
+                                <rect key="frame" x="27.5" y="103" width="320" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="FeR-Hb-OuR"/>
+                                    <constraint firstAttribute="width" constant="320" id="ngJ-7F-ceg"/>
+                                </constraints>
+                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xFG-FP-7dI">
+                                <rect key="frame" x="22.5" y="359" width="330" height="170"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="JHj-VR-4Ca"/>
+                                    <constraint firstAttribute="width" constant="330" id="ytt-zH-8HW"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kig-zu-VrK">
+                                <rect key="frame" x="12.5" y="539" width="350" height="170"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alx-q8-UwC" userLabel="Label1">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="a4Y-5Y-LZV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIu-bg-pBS" userLabel="label 2">
+                                        <rect key="frame" x="0.0" y="60" width="350" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="ziF-OR-npz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xj-dq-RYF" userLabel="Label 3">
+                                        <rect key="frame" x="0.0" y="120" width="350" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="gjc-F1-FDC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xFG-FP-7dI" firstAttribute="top" secondItem="bG6-Py-SOM" secondAttribute="bottom" constant="40" id="5Bh-AK-pJ1"/>
+                            <constraint firstItem="bG6-Py-SOM" firstAttribute="top" secondItem="pce-2I-ZkD" secondAttribute="bottom" constant="24" id="DAi-zU-ZMp"/>
+                            <constraint firstItem="xFG-FP-7dI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N8Z-P5-bWm"/>
+                            <constraint firstItem="Kig-zu-VrK" firstAttribute="top" secondItem="xFG-FP-7dI" secondAttribute="bottom" constant="10" id="PvJ-pd-7da"/>
+                            <constraint firstItem="bG6-Py-SOM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WdN-rx-g1U"/>
+                            <constraint firstItem="pce-2I-ZkD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XnZ-v6-IMo"/>
+                            <constraint firstItem="Kig-zu-VrK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wgu-xb-8Lo"/>
+                            <constraint firstItem="pce-2I-ZkD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="wsK-7i-vDX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstLabel" destination="Alx-q8-UwC" id="7G3-3A-LtF"/>
+                        <outlet property="imageView" destination="xFG-FP-7dI" id="IAU-Ud-ihe"/>
+                        <outlet property="namePickerView" destination="bG6-Py-SOM" id="Rje-me-Ccx"/>
+                        <outlet property="secondLabel" destination="pIu-bg-pBS" id="HJV-fY-29J"/>
+                        <outlet property="thirdLabel" destination="4xj-dq-RYF" id="6kF-lA-Nqr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
